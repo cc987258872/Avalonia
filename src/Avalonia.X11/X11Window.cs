@@ -683,6 +683,7 @@ namespace Avalonia.X11
         {
             if (_handle != IntPtr.Zero)
             {
+                Closed = null;
                 XDestroyWindow(_x11.Display, _handle);
                 Cleanup();
             }

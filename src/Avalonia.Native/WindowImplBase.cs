@@ -286,6 +286,7 @@ namespace Avalonia.Native
 
         public virtual void Dispose()
         {
+            Closed = null;
             _native?.Close();
             _native?.Dispose();
             _native = null;

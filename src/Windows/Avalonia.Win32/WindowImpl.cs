@@ -253,6 +253,8 @@ namespace Avalonia.Win32
 
         public void Dispose()
         {
+            Closed = null;
+
             if (_hwnd != IntPtr.Zero)
             {
                 UnmanagedMethods.DestroyWindow(_hwnd);
